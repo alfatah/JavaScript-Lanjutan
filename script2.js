@@ -1,23 +1,24 @@
 // Cara untuk membuat Object pada javascript
 
 // 1. Object Literal
-let mahasiswa1 = {
-    nama: 'Sholahuddin',
-    energi: 10,
-    makan: function(porsi) {
-        this.energi = this.energi + porsi;
-        console.log(`Hallo ${this.nama}, Selamat makan!`);
-    }
-}
+// PROBLEM : tidak efektif untuk obaject yang banyak
+// let mahasiswa1 = {
+//     nama: 'Sholahuddin',
+//     energi: 10,
+//     makan: function(porsi) {
+//         this.energi = this.energi + porsi;
+//         console.log(`Hallo ${this.nama}, Selamat makan!`);
+//     }
+// }
 
-let mahasiswa2 = {
-    nama: 'Doddy',
-    energi: 20,
-    makan: function(porsi) {
-        this.energi = this.energi + porsi;
-        console.log(`Hallo ${this.nama}, Selamat makan!`);
-    }
-}
+// let mahasiswa2 = {
+//     nama: 'Doddy',
+//     energi: 20,
+//     makan: function(porsi) {
+//         this.energi = this.energi + porsi;
+//         console.log(`Hallo ${this.nama}, Selamat makan!`);
+//     }
+// }
 
 // 2. Function Declaration
 // function Mahasiswa(nama, energi) {
