@@ -24,16 +24,15 @@
 
 const methodMahasiswa = {
 
-   makan: function(porsi) {
+   makan: function (porsi) {
         this.energi += porsi;
         console.log(`Halo ${this.nama}, Selamat makan!`);
-    }
+    },
 
-    main: function(jam) {
+    main: function (jam) {
         this.energi -= jam;
         console.log(`Halo ${this.nama}, Selamat bermain!`);
     }
-
 };
 
 function Mahasiswa(nama, energi) {
@@ -46,8 +45,8 @@ function Mahasiswa(nama, energi) {
     return mahasiswa;
 }
 
-let sholahuddin = Mahasiswa('Sholahuddin',10);
-let doddy = Mahasiswa('Doody',20);
+let sholahuddin = Mahasiswa('Sholahuddin', 10);
+let doddy = Mahasiswa('Doody', 20);
 
 // 3. Constructor Function
 // keyword new
