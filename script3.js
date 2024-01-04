@@ -83,12 +83,12 @@
 
 
 function Mahasiswa(nama, energi) {
-    let mahasiswa = Object.create(methodMahasiswa);
-    mahasiswa.nama = nama;
-    mahasiswa.energi = energi;
-    mahasiswa.makan = methodMahasiswa.makan;
-    mahasiswa.main = methodMahasiswa.main;
-    mahasiswa.tidur = methodMahasiswa.tidur;
+    // let mahasiswa = Object.create(methodMahasiswa);
+    // let mahasiswa = {};
+    let this = Object.create(Mahasiswa.prototype);
+    this.nama = nama;
+    this.energi = energi;
 
-    return mahasiswa;
+    // return mahasiswa;
+    return this;
 }
