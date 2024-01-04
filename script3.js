@@ -78,17 +78,67 @@
 
 
 
+// function Mahasiswa(nama, energi) {
+//     this.nama = nama;
+//     this.energi = energi;
+
+// }
+
+// Mahasiswa.prototype.makan = function(porsi) {
+//     this.energi += porsi;
+//     return `Halo ${this.nama}, Selamat Makan!`;
+// }
+
+// Mahasiswa.prototype.main = function(jam) {
+//     this.energi -= jam;
+//     return `Halo ${this.nama}, Selamat Bermain!`;
+// }
+
+// Mahasiswa.prototype.tidur = function(jam) {
+//     this.energi += jam;
+//     return `Halo ${this.nama}, Selamat Tidur!`;
+// }
+
+// let sholahuddin = new Mahasiswa('Sholahuddin', 10);
 
 
+// versi Class
+// class Mahasiswa {
+//     constructor(nama, energi) {
+//         this.nama = nama;
+//         this.energi = energi;
+//     }
 
+// makan(porsi) {
+//     this.energi += porsi;
+//     return `Halo ${this.nama}, Selamat Makan!`;
+//     }
 
-function Mahasiswa(nama, energi) {
-    // let mahasiswa = Object.create(methodMahasiswa);
-    // let mahasiswa = {};
-    let this = Object.create(Mahasiswa.prototype);
-    this.nama = nama;
-    this.energi = energi;
+// main(jam) {
+//     this.energi -= jam;
+//     return `Halo ${this.nama}, Selamat Bermain!`;
+//     }
 
-    // return mahasiswa;
-    return this;
-}
+// tidur(jam) {
+//     this.energi += jam;
+//     return `Halo ${this.nama}, Selamat Tidur!`;
+//     }
+
+// }
+
+// let sholahuddin = new Mahasiswa('Sholahuddin', 10);
+// let doddy = new Mahasiswa('Doddy', 20);
+
+let angka = [1, 2, 3];
+Array.prototype
+Object.prototype
+Number.prototype
+
+// console.log(angka.reverse());
+// console.log(angka.sort());
+
+// let angka = new Array();
+
+// function Array() {
+//     let this = Object.create(Array.prototype);
+// }
