@@ -75,3 +75,20 @@
 // let doddy = new Mahasiswa('Doddy', 20);
 
 // 4. Object.create
+
+
+
+
+
+
+
+function Mahasiswa(nama, energi) {
+    let mahasiswa = Object.create(methodMahasiswa);
+    mahasiswa.nama = nama;
+    mahasiswa.energi = energi;
+    mahasiswa.makan = methodMahasiswa.makan;
+    mahasiswa.main = methodMahasiswa.main;
+    mahasiswa.tidur = methodMahasiswa.tidur;
+
+    return mahasiswa;
+}
