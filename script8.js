@@ -49,3 +49,22 @@
 
 // const sholahuddin = new Mahasiwa();
 
+const box = document.querySelector('.box');
+box.addEventListener('click', function () {
+    let satu = 'size';
+    let dua = 'caption';
+    // let that = this;
+
+    if (this.classList.contains(satu)) {
+        // satu = temp;
+        // satu = dua;
+        // dua = temp;
+        [satu, dua] = [dua, satu];
+    }
+
+   this.classList.toggle(satu);
+   setTimeout(() => {
+    this.classList.toggle(dua);
+    // console.log(that);
+   }, 600);
+});
