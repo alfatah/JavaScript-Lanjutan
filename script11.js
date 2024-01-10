@@ -32,4 +32,4 @@ const pjmlVideo = document.querySelector('.jumlah-video');
 pjmlVideo.textContent = `${jmlVideo} video`;
 
 
-console.log(detik);
+console.log(jam,menit,detik);
