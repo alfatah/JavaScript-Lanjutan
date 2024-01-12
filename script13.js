@@ -37,16 +37,48 @@
 
 // 3. Conditionals
 // ternary
-const lagu = {
-    judul: 'Tetap Dalam Jiwa',
-    penyanyi: 'Isyana Sarasvati'
+// const lagu = {
+//     judul: 'Kau adalah',
+//     penyanyi: 'Isyana Sarasvati',
+//     feat: 'Rayi Putra'
+// }
+
+// const el = `<div class="lagu"> 
+//     <ul> 
+//     <li>${lagu.penyanyi}</li>
+//     <li>${lagu.judul} feat. ${lagu.feat ? `(feat. ${lagu.feat})` : ''}</li>
+//     </ul>
+// </div>`;
+
+
+// 4. Nested
+// HTML Fragments bersarang
+
+const mhs = {
+    nama: 'Sholahuddin Alfatah',
+    semester: 5,
+    mataKuliah: [
+    'Rakayasa Web', 
+    'Analisis dan Perancangan Sistem Informasi',
+    'Pemprograman Sistem Interaktif',
+    'Perancangan Sistem Berorientasi Object'
+]
+};
+
+function cetakMataKuliah(mataKuliah) {
+    return `
+    <ol>
+        ${mataKuliah.map(mk => `<li>${mk}</li>`).join('')}
+    </ol>
+    `;
 }
 
-const el = `<div class="lagu"> 
+const el = `<div class="mhs"> 
     <ul> 
-    <li>${lagu.penyanyi}</li>
-    <li>${lagu.judul}</li>
-    </ul>
+    <h2>${mhs.nama}</h2>
+    <span class="semester">Semester : ${mhs.semester}</span>
+    <h4>Mata Kuliah :</h4>
+    ${cetakMataKuliah(mhs.mataKuliah)}
 </div>`;
 
 document.body.innerHTML = el;
