@@ -1,0 +1,6 @@
+// Rest Parameter
+
+function myFunc() {
+    
+}
+
