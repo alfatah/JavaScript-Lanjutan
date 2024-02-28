@@ -21,10 +21,27 @@ const mhs = [
         "idDosenWali": 1
     },
     {
-            "nama": "Sholahuddin Alfatah",
-            "nrp": "0000007",
-            "email": "alfatah1505@gmail.com",
-            "jurusan": "Teknik Informatika",
-            "idDosenWali": 1
+        "nama": "Sholahuddin Alfatah",
+        "nrp": "0000007",
+        "email": "alfatah1505@gmail.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "Rahmad",
+        "nrp": "0000008",
+        "email": "rahmad5@gmail.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "Lele",
+        "nrp": "0000009",
+        "email": "lele@gmail.com",
+        "jurusan": "Teknik Informatika",
+        "idDosenWali": 2
     },
 ];
+console.log('mulai');
+mhs.forEach(m => console.log(m.nama));
+console.log('selesai');
