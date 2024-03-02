@@ -45,3 +45,4 @@ const mhs = [
 console.log('mulai');
 mhs.forEach(m => console.log(m.nama));
 console.log('selesai');
+
