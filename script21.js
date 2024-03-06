@@ -46,7 +46,7 @@ console.log('mulai');
 mhs.forEach(m => {
    for( let i = 0; i < 1000000; i++ ) {
     let date = new Date();
-}
+    }
     console.log(m.nama)
 });
 console.log('selesai');
