@@ -43,6 +43,12 @@ const mhs = [
     },
 ];
 console.log('mulai');
-mhs.forEach(m => console.log(m.nama));
+mhs.forEach(m => {
+   for( let i - 0; i < 1000000; i++ ) {
+    lat date = new Date();
+   }
+}
+    console.log(m.nama)
+});
 console.log('selesai');
 
