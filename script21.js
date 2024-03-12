@@ -83,11 +83,9 @@ $.ajax({
     url: 'data/mahasiswa.json',
     success: (mhs) => {
         mhs.forEach(m => console.log(m.nama));
-
     },
     error: (e) => {
         console.log(e.responText);
-
     }
 });
 console.log('selesai');
