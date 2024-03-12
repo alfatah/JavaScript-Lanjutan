@@ -80,7 +80,7 @@
 // JQuery
 console.log('mulai');
 $.ajax({
-    URL: 'data/mahasiswa.json',
+    URL: '/data/data/mahasiswa.json',
     success: (mhs) => {
         mhs.forEach(m => console.log(m.nama));
 
