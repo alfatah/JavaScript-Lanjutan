@@ -80,11 +80,13 @@
 // JQuery
 console.log('mulai');
 $.ajax({
-    URL: 'data/mahasiswa.json',
+    url: 'data/mahasiswa.json',
     success: (mhs) => {
-        console.log(mhs);
+        mhs.forEach(m => console.log(m.nama));
+
     },
-    error: () => {
+    error: (e) => {
+        console.log(e.responText);
 
     }
 });
