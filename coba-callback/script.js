@@ -76,3 +76,16 @@
 // }, () => {
 // });
 // console.log('selesai');
+
+// JQuery
+console.log('mulai');
+$.ajax({
+    URL: 'data/mahasiswa.json',
+    success: (mhs) => {
+        console.log(mhs);
+    },
+    error: () => {
+
+    }
+});
+console.log('selesai');
