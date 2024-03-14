@@ -2,6 +2,6 @@
 = Watching Last Videos :
 = 22.JAVASCRIPT LANJUTAN - 11. Promise
 ================================================
-= Minute to : 01:35
+= Minute to : 08:19
 ================================================
 
