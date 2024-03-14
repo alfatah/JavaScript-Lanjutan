@@ -25,4 +25,7 @@
 // janji (terpenuhi / ingkar)
 // states (fulfilled / rejected / pending)
 // callback (resolve / reject / finally)
-// aksi (then)
+// aksi (then / catch)
+
+// contoh 1
+const janji1 = new Promis((resolve, reject) => {:
