@@ -1,3 +1,4 @@
+![image](https://github.com/alfatah/JavaScript-Lanjutan/assets/11069102/3f2c8cf7-2edb-4d04-bbfd-19100ad9ae81)
 JavaScript adalah bahasa pemrograman yang sangat populer dan sering digunakan untuk mengembangkan aplikasi web interaktif. Dikembangkan awalnya oleh Netscape pada tahun 1995, JavaScript kini menjadi salah satu bahasa pemrograman paling penting di dunia web. Berikut adalah beberapa poin penting tentang JavaScript:
 
 ### 1. **Sintaksis dan Tipe Data:**
