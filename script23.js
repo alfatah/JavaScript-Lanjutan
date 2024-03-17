@@ -14,15 +14,14 @@ $('.search-button').on('click', function () {
            $('.modal-detail-button').on('click', function() {
             // console.log($(this).data('imdbID'));
             $.ajax({
-                url: 'http://www.omdbapi.com/?apikey=f6004623&t=' + $(this).data('imdbID'),
-                success: x => {
-                    const movieDetail = showMovieDetail(x);
-                    console.log(x.Title);
+                url: 'http://www.omdbapi.com/?apikey=f6004623&i=' + $(this).data('imdbID'),
+                success: m => {
+                    const movieDetail = showMovieDetail(m);
                     $('.modal-body').html(movieDetail);
                 },
                 error: (e) => {
                     console.log(e.responseText);
-                }
+                } 
             });
            });
     
@@ -51,19 +50,19 @@ function showCards(m) {
 }
 
 
-function showMovieDetail(x) {
+function showMovieDetail(m) {
     return `<div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-3">
-                                        <img src="${x.Poster}" width="190" height="300" alt="img-fluid">
+                                        <img src="${m.Poster}" width="190" height="300" alt="img-fluid">
                                         </div>
                                         <div class="col md">
                                         <ul class="list-group">
-                                            <li class="list-group-item"><h4>${x.Title} (${x.Year})</h4></li>
-                                            <li class="list-group-item"><strong>Director : </strong> ${x.Director}</li>
-                                            <li class="list-group-item"><strong>Actors : </strong> ${x.Actors}</li>
-                                            <li class="list-group-item"><strong>Writer : </strong> ${x.Writer}</li>
-                                            <li class="list-group-item"><strong>Plot : </strong> ${x.Plot}</li>
+                                            <li class="list-group-item"><h4>${m.Title} (${m.Year})</h4></li>
+                                            <li class="list-group-item"><strong>Director : </strong> ${m.Director}</li>
+                                            <li class="list-group-item"><strong>Actors : </strong> ${m.Actors}</li>
+                                            <li class="list-group-item"><strong>Writer : </strong> ${m.Writer}</li>
+                                            <li class="list-group-item"><strong>Plot : </strong> ${m.Plot}</li>
                                         </ul>
                                         </div>
                                     </div>
