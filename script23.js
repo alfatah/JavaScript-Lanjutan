@@ -1,11 +1,44 @@
-$.ajax({
-    url: 'http://www.omdbapi.com/?apikey=f6004623&s=avengers',
-    success: results => {
-       const movies = results.Search;
-       console.log(movies);
-       let cards = '';
-       movies.forEach(m => {
-        cards += `<div class="col-md-4 my-3">
+$('.search-button').on('click', function () {
+    $.ajax({
+        url: 'http://www.omdbapi.com/?apikey=f6004623&s=' + $('.input-keyword').val(),
+        success: results => {
+           const movies = results.Search;
+           console.log(movies);
+           let cards = '';
+           movies.forEach(m => {
+            cards += showCards(m);
+           });
+           $('.movie-container').html(cards);
+           
+           // ketika tombol detail di-klik
+           $('.modal-detail-button').on('click', function() {
+            // console.log($(this).data('imdbID'));
+            $.ajax({
+                url: 'http://www.omdbapi.com/?apikey=f6004623&t=' + $(this).data('imdbID'),
+                success: x => {
+                    const movieDetail = showMovieDetail(x);
+                    console.log(x.Title);
+                    $('.modal-body').html(movieDetail);
+                },
+                error: (e) => {
+                    console.log(e.responseText);
+                }
+            });
+           });
+    
+    
+        },
+        error: (e) => {
+            console.log(e.responseText);
+        }
+    });
+    
+});
+
+
+
+function showCards(m) {
+    return `<div class="col-md-4 my-3">
                         <div class="card">
                             <img src="${m.Poster}" class="card-img-top">
                             <div class="card-body">
@@ -15,43 +48,24 @@ $.ajax({
                             </div>
                         </div>
                     </div>`;
-       });
-       $('.movie-container').html(cards);
-       
-       // ketika tombol detail di-klik
-       $('.modal-detail-button').on('click', function() {
-        // console.log($(this).data('imdbid'));
-        $.ajax({
-            url: 'http://www.omdbapi.com/?apikey=f6004623&t=' + $(this).data('imdbID'),
-            success: m => {
-                const movieDetail = `<div class="container-fluid">
+}
+
+
+function showMovieDetail(x) {
+    return `<div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-3">
-                                        <img src="${m.Poster}" width="190" height="300" alt="img-fluid">
+                                        <img src="${x.Poster}" width="190" height="300" alt="img-fluid">
                                         </div>
                                         <div class="col md">
                                         <ul class="list-group">
-                                            <li class="list-group-item"><h4>${m.Title} (${m.Year})</h4></li>
-                                            <li class="list-group-item"><strong>Director : </strong> ${m.Director}</li>
-                                            <li class="list-group-item"><strong>Actors : </strong> ${m.Actors}</li>
-                                            <li class="list-group-item"><strong>Writer : </strong> ${m.Writer}</li>
-                                            <li class="list-group-item"><strong>Plot : </strong> ${m.Plot}</li>
+                                            <li class="list-group-item"><h4>${x.Title} (${x.Year})</h4></li>
+                                            <li class="list-group-item"><strong>Director : </strong> ${x.Director}</li>
+                                            <li class="list-group-item"><strong>Actors : </strong> ${x.Actors}</li>
+                                            <li class="list-group-item"><strong>Writer : </strong> ${x.Writer}</li>
+                                            <li class="list-group-item"><strong>Plot : </strong> ${x.Plot}</li>
                                         </ul>
                                         </div>
                                     </div>
                                     </div>`;
-                $('.modal-body').html(movieDetail);
-            },
-            error: (e) => {
-                console.log(e.responseText);
-            }
-        });
-       });
-
-
-
-    },
-    error: (e) => {
-        console.log(e.responseText);
-    }
-});
+}
