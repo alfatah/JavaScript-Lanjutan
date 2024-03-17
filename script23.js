@@ -1,5 +1,5 @@
 $.ajax({
-    url: 'http://www.omdbapi.com/?apikey=f6004623&s=avengers&plot=full',
+    url: 'http://www.omdbapi.com/?apikey=f6004623&s=avengers',
     success: results => {
        const movies = results.Search;
        console.log(movies);
@@ -22,12 +22,12 @@ $.ajax({
        $('.modal-detail-button').on('click', function() {
         // console.log($(this).data('imdbid'));
         $.ajax({
-            url: 'http://www.omdbapi.com/?apikey=f6004623&t=' + $(this).data('imdbid'),
+            url: 'http://www.omdbapi.com/?apikey=f6004623&t=' + $(this).data('imdbID'),
             success: m => {
                 const movieDetail = `<div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-3">
-                                        <img src="${m.Poster}" alt="img-fluid">
+                                        <img src="${m.Poster}" width="190" height="300" alt="img-fluid">
                                         </div>
                                         <div class="col md">
                                         <ul class="list-group">
