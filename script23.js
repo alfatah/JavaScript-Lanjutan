@@ -50,7 +50,7 @@ function showMovieDetail(m) {
     return `<div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                <img src="${m['Poster']}" width="190" height="300" alt="img-fluid">
+                <img src="${m['Poster']}" alt="img-fluid">
             </div>
             <div class="col-md">
                 <ul class="list-group">
@@ -64,3 +64,4 @@ function showMovieDetail(m) {
         </div>
     </div>`;
 }
+
