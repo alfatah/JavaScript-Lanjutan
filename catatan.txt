@@ -1,7 +1,7 @@
 ================================================
 = Watching Last Videos :
-= 23.JAVASCRIPT LANJUTAN - 10.2 Callback (Latihan)
+= 24.JAVASCRIPT LANJUTAN - 12. Fetch
 ================================================
-= Minute to : 21:15
+= Minute to : 00:00
 ================================================
 
