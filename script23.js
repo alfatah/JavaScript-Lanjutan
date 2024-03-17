@@ -34,7 +34,7 @@ $.ajax({
                                             <li class="list-group-item"><h4>${m.Title} (${m.Year})</h4></li>
                                             <li class="list-group-item"><strong>Director : </strong> ${m.Director}</li>
                                             <li class="list-group-item"><strong>Actors : </strong> ${m.Actors}</li>
-                                            <li class="list-group-item"><strong>Writer : </strong> ${m.Writer}/li>
+                                            <li class="list-group-item"><strong>Writer : </strong> ${m.Writer}</li>
                                             <li class="list-group-item"><strong>Plot : </strong> ${m.Plot}</li>
                                         </ul>
                                         </div>
