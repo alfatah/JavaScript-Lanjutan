@@ -1,6 +1,12 @@
 
 // fetch
-const searchButton = document.querySelector('.search-button')
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', function() {
+
+    const inputKeyword = document.querySelector('input-keyword');
+    fetch('http://www.omdbapi.com/?apikey=f6004623&s=' + inputKeyword.value)
+    .then(response => console.log(response.json()));
+});
 
 function showCards(m) {
     return `<div class="col-md-4 my-3">
