@@ -5,7 +5,9 @@ searchButton.addEventListener('click', function() {
 
     const inputKeyword = document.querySelector('input-keyword');
     fetch('http://www.omdbapi.com/?apikey=f6004623&s=' + inputKeyword.value)
-    .then(response => console.log(response.json()));
+    .then(response => response.json())
+    .then(response => console.log(response));
+    
 });
 
 function showCards(m) {
