@@ -1,7 +1,7 @@
 ================================================
 = Watching Last Videos :
-= 24.JAVASCRIPT LANJUTAN - 12. Fetch
+= 25.JAVASCRIPT LANJUTAN - 13. Fetch Refactor (Async Await)
 ================================================
-= Minute to : 10:13
+= Minute to : 00:00
 ================================================
 
