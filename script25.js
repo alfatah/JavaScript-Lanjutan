@@ -78,3 +78,4 @@ function showMovieDetail(m) {
         </div>
     </div>`;
 }
+
