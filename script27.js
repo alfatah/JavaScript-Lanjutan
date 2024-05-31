@@ -34,15 +34,6 @@
 // });
 
 
-const searchButton = document.querySelector('.search-button');
-searchButton.addEventListener('click', async function () {
-    const inputKeyword = document.querySelector('.input-keyword');
-    const movies = await getMovies(inputKeyword.value);
-    // console.log(movies);
-    updateUI(movies);
-});
-
-
 // const modalDetailButton = document.querySelectorAll('.modal-detail-button');
 // modalDetailButton.forEach(btn => {
 //     btn.addEventListener('click', function() { 
@@ -50,6 +41,43 @@ searchButton.addEventListener('click', async function () {
 //     });
 // });
 
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener('click', async function () {
+    try {
+    const inputKeyword = document.querySelector('.input-keyword');
+    const movies = await getMovies(inputKeyword.value);
+    // console.log(movies);
+    updateUI(movies);
+    } catch(err) { 
+    //  console.log(err);
+    alert(err);
+    }
+});
+
+function getMovies(keyword) {
+    return fetch('http://www.omdbapi.com/?apikey=f6004623&s=' + keyword)
+     .then(response => {
+        if( !response.ok ) {
+        // console.log(response);
+        throw new Error(Response.statusText);
+        }
+        return response.json();
+    })
+     .then(response => {
+       if( response.Response === "False" ) {
+        throw new Error(response.Error);
+       }
+       return response.Search;
+    });
+
+}
+
+function updateUI(movies) {
+let cards = '';
+ movies.forEach(m => cards += showCards(m));
+ const movieContainer = document.querySelector('.movie-container'); 
+ movieContainer.innerHTML = cards;
+}
 
 // event binding
 document.addEventListener('click', async function(e) {
@@ -73,19 +101,6 @@ function updateUIDetail(m) {
     modalBody.innerHTML = movieDetail;
 }
 
-    function getMovies(keyword) {
-           return fetch('http://www.omdbapi.com/?apikey=f6004623&s=' + keyword)
-            .then(response => response.json())
-            .then(response => response.Search);
-
-}
-
-function updateUI(movies) {
-    let cards = '';
-        movies.forEach(m => cards += showCards(m));
-        const movieContainer = document.querySelector('.movie-container'); 
-        movieContainer.innerHTML = cards;
-}
 
 function showCards(m) {
     return `<div class="col-md-4 my-3">
