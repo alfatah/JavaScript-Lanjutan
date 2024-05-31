@@ -1,7 +1,7 @@
 ================================================
 = Watching Last Videos :
-= 26.JAVASCRIPT LANJUTAN - 14. Async Await
+= 27.JAVASCRIPT LANJUTAN - 15. Error Handling
 ================================================
-= Minute to : 04:14
+= Minute to : 00:00
 ================================================
 
