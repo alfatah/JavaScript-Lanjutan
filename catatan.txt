@@ -2,6 +2,6 @@
 = Watching Last Videos :
 = 26.JAVASCRIPT LANJUTAN - 14. Async Await
 ================================================
-= Minute to : 03:35
+= Minute to : 04:14
 ================================================
 
