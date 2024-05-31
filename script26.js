@@ -1,6 +1,6 @@
-const coba = new Promise(resolvem => resolvem('selesai'))
+const coba = new Promise(resolvem => {
     setTimeout(() => {
-        
+
     })
     resolve('selesai')
 });
